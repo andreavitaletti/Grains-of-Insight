@@ -20,3 +20,5 @@ innovation.
 This project is also a unique opportunity to strengthen the already on-going collaboration between the Korean and Italian research groups
 that are currently organizing together the 1st International Workshop on on Computational Gastronomy: Data Science for Food and
 Cooking.
+
+The [site of the project](https://andreavitaletti.github.io/Grains-of-Insight/)
