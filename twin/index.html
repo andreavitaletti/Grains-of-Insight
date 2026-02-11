@@ -1,0 +1,1696 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://andreavitaletti.github.io/Grains-of-Insight/twin/">
+      
+      
+        <link rel="prev" href="../wireless/">
+      
+      
+        <link rel="next" href="../os/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Digital Twin - Grains of Insight - A Data Science Perspective on Rice in Gastronomy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="lime" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#digital-twin" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Grains of Insight - A Data Science Perspective on Rice in Gastronomy" class="md-header__button md-logo" aria-label="Grains of Insight - A Data Science Perspective on Rice in Gastronomy" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Grains of Insight - A Data Science Perspective on Rice in Gastronomy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Digital Twin
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Grains of Insight - A Data Science Perspective on Rice in Gastronomy" class="md-nav__button md-logo" aria-label="Grains of Insight - A Data Science Perspective on Rice in Gastronomy" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    Grains of Insight - A Data Science Perspective on Rice in Gastronomy
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Intro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../simulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Simulate a node
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../real/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    A real node
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sample/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sampling the Environment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wireless/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wireless Connectivity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Digital Twin
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Digital Twin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#estimating-clock-drift" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estimating clock drift
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estimating clock drift">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-the-mathematical-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. The Mathematical Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-implementation-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Implementation Strategy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Implementation Strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-the-physical-asset-esp32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. The Physical Asset (ESP32)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-the-digital-twin-python-on-pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. The Digital Twin (Python on PC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-closing-the-loop-adjustment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Closing the Loop: Adjustment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-is-a-digital-twin-and-not-just-ntp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why this is a "Digital Twin" and not just NTP:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-correction-phi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase Correction (\(\phi\)):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frequency-skew-correction-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frequency (Skew) Correction (\(R\)):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esp32-smooth-clock-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ESP32 Smooth Clock Implementation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-the-anchoring-logic-is-critical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why the "Anchoring" Logic is Critical
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-digital-twin-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Digital Twin (Python)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-the-twin-thinks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the Twin "Thinks"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-updated-esp32-code-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Updated ESP32 Code (C++)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-updated-digital-twin-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Updated Digital Twin (Python)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-of-the-twin-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary of the "Twin" Logic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maintenance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-difference-between-static-and-dynamic-unbalance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The difference between Static and Dynamic Unbalance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-simple-experiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A simple experiment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-simple-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A simple model
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    An OS is better
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../energy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Energy matters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IoT and Web3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ML on node
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../edge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Edge computing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filters
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crowdsourcing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Crowdsourcing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IoT-lab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#estimating-clock-drift" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estimating clock drift
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estimating clock drift">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-the-mathematical-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. The Mathematical Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-implementation-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Implementation Strategy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Implementation Strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-the-physical-asset-esp32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. The Physical Asset (ESP32)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-the-digital-twin-python-on-pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. The Digital Twin (Python on PC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-closing-the-loop-adjustment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Closing the Loop: Adjustment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-is-a-digital-twin-and-not-just-ntp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why this is a "Digital Twin" and not just NTP:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-correction-phi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase Correction (\(\phi\)):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frequency-skew-correction-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frequency (Skew) Correction (\(R\)):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esp32-smooth-clock-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ESP32 Smooth Clock Implementation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-the-anchoring-logic-is-critical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why the "Anchoring" Logic is Critical
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-digital-twin-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Digital Twin (Python)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-the-twin-thinks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the Twin "Thinks"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-updated-esp32-code-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Updated ESP32 Code (C++)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-updated-digital-twin-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Updated Digital Twin (Python)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary-of-the-twin-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary of the "Twin" Logic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Maintenance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-difference-between-static-and-dynamic-unbalance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The difference between Static and Dynamic Unbalance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-simple-experiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A simple experiment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-simple-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A simple model
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="digital-twin">Digital Twin</h1>
+<h2 id="estimating-clock-drift">Estimating clock drift</h2>
+<p>ESP32 internal oscillators are cost-effective but notoriously sensitive to temperature, leading to a drift that can be several seconds a day.</p>
+<p>By building a <strong>Digital Twin</strong>, we aren't just syncing the time; we are creating a mathematical model that lives on your PC, predicts how "wrong" the ESP32 is at any given moment, and feeds back a correction.</p>
+<h3 id="the-architecture">The Architecture</h3>
+<p>To model the drift, the Twin needs to observe the relationship between the <strong>Physical Clock</strong> (ESP32) and the <strong>Reference Clock</strong> (PC).</p>
+<p><img alt="image-2026231832291.png" src="IoT_short_course/docs/assets/images/image-2026231832291.png" /></p>
+<hr />
+<h3 id="1-the-mathematical-model">1. The Mathematical Model</h3>
+<p>We assume the clock drift is linear over short-to-medium durations. The relationship between the ESP32 time (<span class="arithmatex">\(t_{esp}\)</span>) and the PC time (<span class="arithmatex">\(t_{ref}\)</span>) can be modeled as:</p>
+<div class="arithmatex">\[t_{esp} = (1 + R) \cdot t_{ref} + \phi\]</div>
+<p><img alt="image-2026231539281.png" src="IoT_short_course/docs/assets/images/image-2026231539281.png" /></p>
+<p>Where:</p>
+<ul>
+<li>
+<p><strong><span class="arithmatex">\(R\)</span></strong>: The drift rate (the slope). If <span class="arithmatex">\(R &gt; 0\)</span>, the ESP32 is running fast.</p>
+</li>
+<li>
+<p><strong><span class="arithmatex">\(\phi\)</span></strong>: The initial phase offset.</p>
+</li>
+</ul>
+<p>The Digital Twin’s job is to continuously estimate <span class="arithmatex">\(R\)</span> and <span class="arithmatex">\(\phi\)</span> using <strong>Linear Regression</strong>.</p>
+<hr />
+<h3 id="2-implementation-strategy">2. Implementation Strategy</h3>
+<h4 id="a-the-physical-asset-esp32">A. The Physical Asset (ESP32)</h4>
+<p>The ESP32 sends its internal <code>micros()</code> value to the PC via Serial or MQTT at regular intervals.</p>
+<div class="highlight"><pre><span></span><code>// ESP32 Snippet
+void loop() {
+  // Send local timestamp to the Digital Twin every 10 seconds
+  unsigned long local_now = micros();
+  Serial.println(local_now); 
+  delay(10000);
+}
+</code></pre></div>
+<h4 id="b-the-digital-twin-python-on-pc">B. The Digital Twin (Python on PC)</h4>
+<p>The Twin maintains a state of the ESP32's clock behavior. It uses the incoming data to update its internal model.</p>
+<p>Python</p>
+<div class="highlight"><pre><span></span><code>import time
+import numpy as np
+from sklearn.linear_model import LinearRegression
+
+class ESP32DigitalTwin:
+    def __init__(self):
+        self.esp_times = []
+        self.ref_times = []
+        self.model = LinearRegression()
+        self.is_trained = False
+
+    def update_model(self, esp_micros):
+        # Record the reference time the moment the packet arrives
+        ref_now = time.time() 
+
+        self.esp_times.append([esp_micros])
+        self.ref_times.append(ref_now)
+
+        if len(self.esp_times) &gt; 5:
+            self.model.fit(self.esp_times, self.ref_times)
+            self.is_trained = True
+
+    def predict_real_time(self, current_esp_micros):
+        if not self.is_trained:
+            return &quot;Insufficient data&quot;
+        # Predict what the PC time &#39;should&#39; be based on ESP32 micros
+        return self.model.predict([[current_esp_micros]])[0]
+
+# Usage
+twin = ESP32DigitalTwin()
+# ... data collection loop ...
+twin.update_model(1000050) # Example incoming microsecond value
+</code></pre></div>
+<hr />
+<h3 id="3-closing-the-loop-adjustment">3. Closing the Loop: Adjustment</h3>
+<p>Once the Twin calculates the drift rate <span class="arithmatex">\(R\)</span>, it can send a <strong>Correction Factor</strong> back to the ESP32.</p>
+<p>Instead of just resetting the time (which causes "time jumps"), the Digital Twin tells the ESP32 how much to "stretch" or "shrink" its perception of a second.</p>
+<blockquote>
+<p><strong>The Adjustment Logic:</strong></p>
+<p>If the Twin calculates that the ESP32 is running <strong>1%</strong> fast, it sends a command: <code>SET_TICK_MULTIPLIER = 0.99</code>. The ESP32 then multiplies its internal delays or timestamps by this factor to stay in sync without jumping.</p>
+</blockquote>
+<h3 id="why-this-is-a-digital-twin-and-not-just-ntp">Why this is a "Digital Twin" and not just NTP:</h3>
+<ol>
+<li>
+<p><strong>Predictive:</strong> If the ESP32 loses connection, the Twin can still predict its current time based on the historical drift model.</p>
+</li>
+<li>
+<p><strong>Environmental Awareness:</strong> Advanced twins can incorporate temperature data (since <span class="arithmatex">\(R\)</span> varies with heat) to create a multi-variable drift model.</p>
+</li>
+</ol>
+<h3 id="phase-correction-phi">Phase Correction (<span class="arithmatex">\(\phi\)</span>):</h3>
+<ul>
+<li><strong>*What it is:</strong> An absolute offset.</li>
+<li><strong>Action:</strong> The PC tells the ESP32: <em>"Your current time is 100ms behind. Add 100ms to your current counter immediately."</em></li>
+<li><strong>Problem:</strong> This causes "time jumps," which can break applications that rely on smooth intervals (like sensor sampling).</li>
+</ul>
+<h3 id="frequency-skew-correction-r">Frequency (Skew) Correction (<span class="arithmatex">\(R\)</span>):</h3>
+<ul>
+<li><strong>*What it is:</strong> A rate multiplier (the "Tick Multiplier" mentioned earlier).</li>
+<li><strong>Action:</strong> The PC tells the ESP32: <em>"Your hardware oscillator is 0.01% slow. For every 1,000,000 internal ticks, count them as 1,000,100 ticks."</em></li>
+<li><strong>Benefit:</strong> This keeps time smooth and continuous without jumps.</li>
+</ul>
+<p>In a robust Digital Twin, you would ideally send <strong>both</strong>:</p>
+<ol>
+<li>
+<p>A <strong>Phase Correction</strong> at startup to get the clocks in the same ballpark.</p>
+</li>
+<li>
+<p>A constant <strong>Frequency Correction</strong> (<span class="arithmatex">\(R\)</span>) to keep them from drifting apart due to heat or hardware quality.</p>
+</li>
+</ol>
+<h3 id="esp32-smooth-clock-implementation">ESP32 Smooth Clock Implementation</h3>
+<p>C++</p>
+<div class="highlight"><pre><span></span><code>#include &lt;Arduino.h&gt;
+
+// Global variables for the Digital Twin state
+double drift_multiplier = 1.0;    // The &#39;R&#39; factor (1 + R)
+uint64_t last_raw_micros = 0;     // Hardware time at last update
+uint64_t base_synced_micros = 0;  // Virtual time at last update
+
+/**
+ * Returns the &quot;Virtual Time&quot; which is the hardware micros() 
+ * adjusted by the Digital Twin&#39;s correction factor.
+ */
+uint64_t get_synced_micros() {
+    uint64_t current_raw = micros();
+    uint64_t elapsed_raw = current_raw - last_raw_micros;
+
+    // Apply the multiplier only to the time elapsed since the last update
+    return base_synced_micros + (uint64_t)(elapsed_raw * drift_multiplier);
+}
+
+void setup() {
+    Serial.begin(115200);
+    last_raw_micros = micros();
+    base_synced_micros = last_raw_micros;
+}
+
+void loop() {
+    // 1. Send data to the Digital Twin every 5 seconds
+    static uint32_t last_report = 0;
+    if (millis() - last_report &gt; 5000) {
+        last_report = millis();
+        // Send raw hardware time so the Twin can calculate drift
+        Serial.print(&quot;RAW_MICROS:&quot;);
+        Serial.println(micros());
+    }
+
+    // 2. Listen for adjustments from the Digital Twin (the PC)
+    if (Serial.available() &gt; 0) {
+        String data = Serial.readStringUntil(&#39;\n&#39;);
+        if (data.startsWith(&quot;SET_MULT:&quot;)) {
+            float new_multiplier = data.substring(9).toFloat();
+
+            // ANCHORING: Update the base time before changing the multiplier
+            // This prevents the clock from &quot;jumping&quot; backwards or forwards
+            base_synced_micros = get_synced_micros();
+            last_raw_micros = micros();
+
+            drift_multiplier = new_multiplier;
+
+            Serial.print(&quot;ACK: New Multiplier applied: &quot;);
+            Serial.println(drift_multiplier, 6);
+        }
+    }
+
+    // Example of using the synced time for a local task
+    // (e.g., a precise 1-second blink based on the Virtual Clock)
+    static uint64_t next_blink = 0;
+    if (get_synced_micros() &gt;= next_blink) {
+        next_blink += 1000000; // Schedule next blink in 1 &quot;Virtual Second&quot;
+        // Toggle LED logic here...
+    }
+}
+</code></pre></div>
+<hr />
+<h3 id="why-the-anchoring-logic-is-critical">Why the "Anchoring" Logic is Critical</h3>
+<p>If you simply did <code>micros() * multiplier</code>, the moment your Digital Twin sent a new multiplier (say, from <code>1.0001</code> to <code>0.9999</code>), your clock would instantly jump backwards by thousands of microseconds.</p>
+<p>By using the <strong>Anchor Method</strong> (<span class="arithmatex">\(base + elapsed \times mult\)</span>), we ensure that:</p>
+<ol>
+<li>
+<p><strong>Continuity:</strong> The time at the exact moment of the update remains the same.</p>
+</li>
+<li>
+<p><strong>Smoothness:</strong> Only the <em>slope</em> of the time progression changes after the update.</p>
+</li>
+</ol>
+<h3 id="the-digital-twin-python">The Digital Twin (Python)</h3>
+<p>You will need the <code>pyserial</code> and <code>scikit-learn</code> libraries:</p>
+<p><code>pip install pyserial scikit-learn</code></p>
+<p>Python</p>
+<div class="highlight"><pre><span></span><code>import serial
+import time
+import numpy as np
+from sklearn.linear_model import LinearRegression
+
+# Configuration
+SERIAL_PORT = &#39;COM3&#39;  # Change to your port (e.g., /dev/ttyUSB0 on Linux)
+BAUD_RATE = 115200
+WINDOW_SIZE = 10      # Number of samples to keep for the model
+
+class ClockDigitalTwin:
+    def __init__(self):
+        self.esp_raw_micros = []
+        self.pc_ref_seconds = []
+        self.model = LinearRegression()
+
+    def add_sample(self, esp_micros):
+        # Record the &quot;Gold Standard&quot; time from the PC
+        now_pc = time.time()
+
+        self.esp_raw_micros.append([esp_micros])
+        self.pc_ref_seconds.append(now_pc)
+
+        # Keep only the most recent samples to adapt to temperature changes
+        if len(self.esp_raw_micros) &gt; WINDOW_SIZE:
+            self.esp_raw_micros.pop(0)
+            self.pc_ref_seconds.pop(0)
+
+    def calculate_multiplier(self):
+        if len(self.esp_raw_micros) &lt; 5:
+            return None # Not enough data yet
+
+        # Fit model: PC_Time = (m * ESP_Micros) + c
+        self.model.fit(self.esp_raw_micros, self.pc_ref_seconds)
+
+        # The slope &#39;m&#39; tells us how many PC seconds pass per 1 ESP32 microsecond
+        # We multiply by 1,000,000 because the ESP32 works in microseconds
+        multiplier = self.model.coef_[0] * 1_000_000
+        return multiplier
+
+def main():
+    twin = ClockDigitalTwin()
+
+    try:
+        with serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=1) as ser:
+            print(f&quot;Digital Twin active on {SERIAL_PORT}. Waiting for data...&quot;)
+
+            while True:
+                line = ser.readline().decode(&#39;utf-8&#39;).strip()
+
+                if line.startswith(&quot;RAW_MICROS:&quot;):
+                    raw_val = int(line.split(&quot;:&quot;)[1])
+                    twin.add_sample(raw_val)
+
+                    mult = twin.calculate_multiplier()
+                    if mult:
+                        print(f&quot;Twin Model Updated. Predicted Multiplier: {mult:.6f}&quot;)
+                        # Send the correction back to the physical asset
+                        command = f&quot;SET_MULT:{mult:.6f}\n&quot;
+                        ser.write(command.encode(&#39;utf-8&#39;))
+
+                elif line.startswith(&quot;ACK:&quot;):
+                    print(f&quot;ESP32 Confirmation: {line}&quot;)
+
+    except serial.SerialException as e:
+        print(f&quot;Error: {e}&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre></div>
+<hr />
+<h3 id="how-the-twin-thinks">How the Twin "Thinks"</h3>
+<p>The Python script is essentially looking at a scatter plot of <strong>ESP32 Time</strong> vs. <strong>PC Time</strong>.</p>
+<ul>
+<li>
+<p><strong>If the points form a 45° line:</strong> The ESP32 is perfectly in sync (<span class="arithmatex">\(m = 1.0\)</span>).</p>
+</li>
+<li>
+<p><strong>If the line is steeper:</strong> The ESP32 is running slow; the Twin sends a multiplier <span class="arithmatex">\(&gt; 1.0\)</span> to speed it up.</p>
+</li>
+<li>
+<p><strong>If the line is flatter:</strong> The ESP32 is running fast; the Twin sends a multiplier <span class="arithmatex">\(&lt; 1.0\)</span> to slow it down.</p>
+</li>
+</ul>
+<h3 id="2-updated-esp32-code-c">2. Updated ESP32 Code (C++)</h3>
+<p>We add a <code>SET_PHASE</code> command to set the initial "Wall Clock" time.</p>
+<p>C++</p>
+<div class="highlight"><pre><span></span><code>#include &lt;Arduino.h&gt;
+
+double drift_multiplier = 1.0;
+uint64_t last_raw_micros = 0;
+double base_wall_time_s = 0; // The Wall Clock time in seconds (Epoch)
+
+double get_wall_clock() {
+    uint64_t current_raw = micros();
+    uint64_t elapsed_raw = current_raw - last_raw_micros;
+
+    // Convert elapsed microseconds to adjusted seconds
+    double elapsed_adjusted_s = (elapsed_raw * drift_multiplier) / 1000000.0;
+    return base_wall_time_s + elapsed_adjusted_s;
+}
+
+void setup() {
+    Serial.begin(115200);
+}
+
+void loop() {
+    // 1. Send heartbeat to Twin
+    static uint32_t last_report = 0;
+    if (millis() - last_report &gt; 5000) {
+        last_report = millis();
+        Serial.print(&quot;RAW_MICROS:&quot;);
+        Serial.print(micros());
+        Serial.print(&quot;,CUR_WALL:&quot;);
+        Serial.println(get_wall_clock(), 3); // Tell the twin what we THINK the time is
+    }
+
+    // 2. Handle Commands
+    if (Serial.available() &gt; 0) {
+        String data = Serial.readStringUntil(&#39;\n&#39;);
+
+        // Set the &quot;Starting Line&quot; (Phase)
+        if (data.startsWith(&quot;SET_PHASE:&quot;)) {
+            base_wall_time_s = data.substring(10).toDouble();
+            last_raw_micros = micros();
+            Serial.println(&quot;ACK: Phase (Wall Clock) Initialized.&quot;);
+        }
+
+        // Adjust the &quot;Speed&quot; (Frequency)
+        if (data.startsWith(&quot;SET_MULT:&quot;)) {
+            // Anchor the time before changing the rate
+            base_wall_time_s = get_wall_clock();
+            last_raw_micros = micros();
+            drift_multiplier = data.substring(9).toDouble();
+            Serial.println(&quot;ACK: Rate Adjusted.&quot;);
+        }
+    }
+}
+</code></pre></div>
+<hr />
+<h3 id="3-updated-digital-twin-python">3. Updated Digital Twin (Python)</h3>
+<p>The Python script now performs two steps:</p>
+<ol>
+<li>
+<p><strong>Sync Phase:</strong> Sends the current PC time immediately upon connection.</p>
+</li>
+<li>
+<p><strong>Sync Frequency:</strong> Continues to calculate and send the drift multiplier.</p>
+</li>
+</ol>
+<p>Python</p>
+<div class="highlight"><pre><span></span><code>import serial
+import time
+from sklearn.linear_model import LinearRegression
+
+# ... (Previous Class Setup) ...
+
+def main():
+    twin = ClockDigitalTwin()
+    phase_synced = False
+
+    with serial.Serial(&#39;COM3&#39;, 115200, timeout=1) as ser:
+        time.sleep(2) # Wait for ESP32 reboot
+
+        while True:
+            # 1. INITIAL PHASE SYNC
+            if not phase_synced:
+                now = time.time()
+                ser.write(f&quot;SET_PHASE:{now:.3f}\n&quot;.encode())
+                phase_synced = True
+                print(f&quot;Sent initial Phase: {now}&quot;)
+
+            line = ser.readline().decode(&#39;utf-8&#39;).strip()
+            if &quot;RAW_MICROS&quot; in line:
+                # Parse: RAW_MICROS:12345,CUR_WALL:17000.123
+                parts = line.split(&quot;,&quot;)
+                raw_micros = int(parts[0].split(&quot;:&quot;)[1])
+                esp_thinks_wall = float(parts[1].split(&quot;:&quot;)[1])
+
+                twin.add_sample(raw_micros)
+
+                # 2. FREQUENCY ADJUSTMENT
+                mult = twin.calculate_multiplier()
+                if mult:
+                    ser.write(f&quot;SET_MULT:{mult:.8f}\n&quot;.encode())
+                    error = time.time() - esp_thinks_wall
+                    print(f&quot;Correction sent. Current Error: {error*1000:.2f}ms&quot;)
+</code></pre></div>
+<hr />
+<h3 id="summary-of-the-twin-logic">Summary of the "Twin" Logic</h3>
+<ol>
+<li>
+<p><strong>The Phase Correction (<code>SET_PHASE</code>)</strong>: This is like setting a watch. It happens once (or rarely) to align the two clocks to the same "zero" point.</p>
+</li>
+<li>
+<p><strong>The Frequency Correction (<code>SET_MULT</code>)</strong>: This is like adjusting the watch's internal gears. It happens continuously to ensure that as the ESP32 gets hot or cold, the Digital Twin keeps the "Virtual Clock" perfectly aligned with the PC.</p>
+</li>
+</ol>
+<p>This system is essentially a <strong>Software-Defined Clock</strong>. Your ESP32 hardware is doing the "ticking," but the Digital Twin is providing the "intelligence" to make those ticks meaningful.</p>
+<p>Would you like to explore how to make the Digital Twin <strong>predictive</strong>, so it can estimate the clock drift based on the ESP32's <strong>temperature</strong>?</p>
+<h2 id="maintenance">Maintenance</h2>
+<ul>
+<li>Periodic</li>
+<li>Preventive</li>
+<li>Predictive</li>
+<li>Reactive</li>
+</ul>
+<p><img alt="" src="../assets/images/2025-02-22-08-39-20.png" title="https://www.sim-tek.com.tr/predictive-maintenance/" /></p>
+<h2 id="the-difference-between-static-and-dynamic-unbalance"><a href="https://www.youtube.com/watch?v=JB8i7LtY3mU">The difference between Static and Dynamic Unbalance</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JB8i7LtY3mU?si=5j4mh8RmYGS-83ng" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<h2 id="a-simple-experiment">A simple experiment</h2>
+<p><img alt="" src="../assets/images/schematics.png" />
+<img alt="" src="../assets/images/device.png" />
+<img alt="" src="../assets/images/rest.png" />
+<img alt="" src="../assets/images/balanced.png" />
+<img alt="" src="../assets/images/unbalanced.png" /></p>
+<p><a href="https://github.com/andreavitaletti/PlatformIO/tree/main/Projects/Digital_twin">code</a></p>
+<h2 id="a-simple-model">A simple model</h2>
+<p>Centrifugal force of a mass <span class="arithmatex">\(m_e\)</span> at distance <span class="arithmatex">\(r\)</span> from the center of rotation, with angular velocity <span class="arithmatex">\(\omega\)</span>: <span class="arithmatex">\(F​=m_e ​r \omega\)</span></p>
+<p>Using a lumped mass model, and assuming the damping coefficient and the stiffness of the support are negligible, if the mass or the rotor is <span class="arithmatex">\(m\)</span>, we can write :</p>
+<p><span class="arithmatex">\(m \ddot{x} = m_e ​r \omega^2 cos(\omega t)\)</span></p>
+<p><span class="arithmatex">\(m \ddot{y} = m_e ​r \omega^2 sin(\omega t)\)</span></p>
+<p>This allows us to estimate the accelerations under the simplistic assumptions we made. </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Created by Andrea Vitaletti.<br/><img alt="" style="border-width:0" src="https://andreavitaletti.github.io/IoT_short_course/assets/images/mail.png" /></br><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.gg/TZhMmbgq" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/andrea-vitaletti-3651442/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
